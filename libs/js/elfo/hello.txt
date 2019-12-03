@@ -1,0 +1,2 @@
+Bean: 'What's this weird feeling I don't want to drink away?' 
+Elfo: 'That's hope. That's hope!'
