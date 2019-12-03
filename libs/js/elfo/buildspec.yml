@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "I'm elfo"
+      - ls
+
+artifacts:
+  files:
+    - "**/*"
