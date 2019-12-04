@@ -8,4 +8,4 @@ services:
     env_file:
       - .env    
     volumes:
-      - /Users/chongjam/Sites/arcteryx/MONOBIRD/gateway/haproxy/:/usr/local/etc/haproxy:ro
+      - ${MOUNT_DIR}/haproxy/:/usr/local/etc/haproxy:ro
