@@ -1,5 +1,7 @@
 import { Section, Title, Paragraph } from "../components/style";
+import HeroImage from "../components/heroImage";
 
+const data = {};
 const Index = () => (
   <Section>
     <Title>Alpha SV Jacket Men's</Title>
@@ -8,6 +10,7 @@ const Index = () => (
       conditions. Alpha Series: Climbing and alpine focused systems | SV: Severe
       Weather.
     </Paragraph>
+    <HeroImage data={data} />
   </Section>
 );
 
