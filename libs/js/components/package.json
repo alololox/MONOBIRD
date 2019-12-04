@@ -4,15 +4,21 @@
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-docs": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",
+    "@storybook/addon-storysource": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "babel-loader": "^8.0.6",
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {}
+  "dependencies": {
+    "styled-components": "^4.4.1"
+  }
 }
