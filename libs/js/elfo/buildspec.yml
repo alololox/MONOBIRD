@@ -9,5 +9,6 @@ phases:
       - echo "I'm elfo"
       - ls
 artifacts:
+  base-directory: libs/js/elfo
   files:
     - "**/*"
