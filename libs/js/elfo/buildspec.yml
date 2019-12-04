@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  build:
+    commands:
+      - echo "I'm elfo"
+      - ls
+artifacts:
+  base-directory: libs/js/elfo
+  files:
+    - "**/*"
