@@ -1,9 +1,0 @@
-{
-  "name": "console-helpers",
-  "version": "1.0.0",
-  "main": "lib/index.js",
-  "module": "src/index.js",
-  "scripts": {
-    "bootstrap": "lerna bootstrap"
-  }
-}
