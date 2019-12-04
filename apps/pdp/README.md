@@ -34,3 +34,4 @@ Start
 Stop
 
 > ./docker-stop.sh
+.
