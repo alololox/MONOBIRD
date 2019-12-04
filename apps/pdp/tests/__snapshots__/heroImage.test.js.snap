@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroImage Discounted price contains discounted class 1`] = `
+<div
+  className="product-image"
+>
+  <figure>
+    <img
+      alt="Alpha SV Jacket Men's Trail Blaze"
+      className="sc-bdVaJa fyFCbK"
+      data-colour-name="Trail"
+      data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Alpha-SV-Jacket-Trail-Blaze.jpg?auto=format&w=1350"
+      data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Alpha-SV-Jacket-Trail-Blaze.png?auto=format"
+      itemType="image"
+      src="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Alpha-SV-Jacket-Trail-Blaze.png?auto=format"
+    />
+    <figcaption
+      className="sc-bwzfXH eKeXgs"
+    >
+      Alpha SV Jacket
+    </figcaption>
+  </figure>
+</div>
+`;
