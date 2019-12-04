@@ -21,6 +21,16 @@ This NextJS application will represent the PDP application of the MONO REPO.
 
 2. Create and run our container
 
-> docker run -d -p 9080:3000 --name pdp nextjsapp
+> docker run --rm -d -p 9080:3000 --name pdp nextjsapp
 
 3. Go to http://localhost:9080
+
+### Start/stop scripts
+
+Start
+
+> ./docker-start.sh
+
+Stop
+
+> ./docker-stop.sh
