@@ -16,6 +16,10 @@ The local gateway is an [HAProxy 2.1](http://cbonte.github.io/haproxy-dconv/) ap
 - Go to [local.arcteryx.com](http://local.arcteryx.com)
 - To stop you can `ctrl-C`
 
+## Development
+
+It's possible to develop behind the gateway with webpack hot reloads. Just run `npm run gateway-hot` in steps 1 and 2 above.
+
 ## Other Backends
 
 You can modify the `.env` file to point the gateway at different backends. For example:
