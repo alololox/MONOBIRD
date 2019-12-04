@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  gateway:
+    image: 'haproxy:2.1'
+    container_name: 'arc-gateway'
+    ports: ['80:80']
+    env_file:
+      - .env    
+    volumes:
+      - /Users/chongjam/Sites/arcteryx/MONOBIRD/gateway/haproxy/:/usr/local/etc/haproxy:ro
