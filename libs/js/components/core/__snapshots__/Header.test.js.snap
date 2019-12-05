@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dirty Little Header Test Renders Header 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdVaJa cMNoxm"
+  >
+    <img
+      class="sc-bwzfXH jThacJ"
+      src="//images.arcteryx.com/foundation-ui/svgs/ArcBirdWhite.svg"
+    />
+    <ul
+      class="sc-htpNat gtMwsM"
+    >
+      <li
+        class="sc-bxivhb jULzu"
+      >
+        Monobird
+      </li>
+      <li
+        class="sc-bxivhb jULzu"
+      >
+        Men's
+      </li>
+      <li
+        class="sc-bxivhb jULzu"
+      >
+        Women's
+      </li>
+      <li
+        class="sc-bxivhb jULzu"
+      >
+        Explore
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
