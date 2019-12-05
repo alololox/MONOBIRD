@@ -27,7 +27,3 @@ You can modify the `.env` file to point the gateway at different backends. For e
 LANDING_PAGES_ORIGIN=landing-pages.us-west-2.elasticbeanstalk.com
 CDP_PAGES_ORIGIN=category-page-development.us-west-2.elasticbeanstalk.com
 ```
-
-## TODO
-
-- Make the market configurable
