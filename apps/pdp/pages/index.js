@@ -1,3 +1,4 @@
+import React from "react";
 import { Section, Title, Paragraph } from "../components/style";
 import HeroImage from "../components/heroImage";
 
