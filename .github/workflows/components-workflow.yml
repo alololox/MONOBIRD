@@ -24,13 +24,13 @@ jobs:
     - run: npm test
       working-directory: libs/js/components
 
-  build-qa:
+  deploy-node-package:
     if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
-    name: Publish Components to npm
+    name: Deploy Node Package
     steps:
       # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
-      - name: Publish Components to npm
+      - name: Publish Components to NPM
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
