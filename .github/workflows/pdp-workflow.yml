@@ -1,4 +1,4 @@
-name: PDP Tests
+name: PDP
 on:
   pull_request:
   push:
