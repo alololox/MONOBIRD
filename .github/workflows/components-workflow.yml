@@ -1,4 +1,4 @@
-name: PDP
+name: Components
 on:
   pull_request:
   push:
