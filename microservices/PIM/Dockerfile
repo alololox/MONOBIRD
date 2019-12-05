@@ -4,7 +4,10 @@ WORKDIR /app
 # Copy csproj and restore as distinct layers
 COPY *.csproj ./
 RUN dotnet restore
-RUN dotnet dev-certs https --trust
+
+# Copy HTTPS Certificate
+COPY https/cert-aspnetcore.pfx /https/cert-aspnetcore.pfx
+
 
 # Copy everything else and build
 COPY . ./
