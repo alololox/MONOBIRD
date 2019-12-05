@@ -50,7 +50,7 @@ const Header = ({ title }) => (
   </Bar>
 );
 
-Header.PropTypes = {
+Header.propTypes = {
   title: PropTypes.string.isRequired
 };
 export default Header;
