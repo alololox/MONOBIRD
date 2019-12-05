@@ -10,10 +10,12 @@
     "@storybook/addon-docs": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",
     "@storybook/addon-storyshots": "^5.2.8",
+    "@storybook/addon-storysource": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
     "lerna": "^3.16.4"
@@ -21,7 +23,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest -c jest.config.js --coverage --watch"
+    "test": "jest -c jest.config.js --coverage --watchAll --no-watchman"
   },
   "dependencies": {
     "styled-components": "^4.4.1"

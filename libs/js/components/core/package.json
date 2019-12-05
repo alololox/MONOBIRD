@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "test": "jest -c jest.config.js --coverage --watchAll"
   }
 }
