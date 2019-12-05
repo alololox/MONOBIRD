@@ -3,9 +3,9 @@ const path = require("path");
 module.exports = {
   roots: ["<rootDir>"],
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": path.resolve(__dirname, "./wrapJest.js")
+    "^.+\\.(js|jsx|ts|tsx)$": path.resolve(__dirname, "./wrapBabelForJest.js")
   },
-  testMatch: ["<rootDir>(*.)test.{js, jsx}"], // finds test
+  testMatch: ["<rootDir>(*.)test.{js, jsx}", "<rootDir>/**/(*.)test.{js, jsx}"], // finds test
   moduleFileExtensions: ["js", "jsx", "json", "node"],
   testPathIgnorePatterns: ["/node_modules/", "/public/"],
   setupFilesAfterEnv: [
