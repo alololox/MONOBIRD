@@ -1,8 +1,6 @@
 name: PDP Tests
 on:
   pull_request:
-    paths:
-      - '*'
   push:
     branches: 
       - master
