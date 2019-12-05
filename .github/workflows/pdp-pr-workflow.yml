@@ -1,6 +1,8 @@
 name: PDP Tests
 on:
   pull_request:
+    paths:
+      - '*'
   push:
     branches: 
       - master
@@ -25,13 +27,13 @@ jobs:
     - run: npm test
       working-directory: apps/pdp
 
-  build-prod:
+  build-qa:
+    if: github.event == 'push' && github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
-    if: github.event == 'push' &&  github.ref == 'refs/heads/develop'
-    name: Deploy PDP To Production
+    name: Deploy PDP To QA
     steps:
       # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
-      - name: Deployinf PDP To Production
+      - name: Deploying PDP To QA
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
