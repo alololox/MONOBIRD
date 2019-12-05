@@ -1,12 +1,15 @@
 name: PDP Tests
-
 on:
   pull_request:
+  push:
+    branches: 
+      - master
+      - develop
     paths:
       - 'apps/pdp/*'
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,4 +24,18 @@ jobs:
       working-directory: apps/pdp
     - run: npm test
       working-directory: apps/pdp
-      
+
+  build-prod:
+    runs-on: ubuntu-latest
+    if: github.event == 'push' &&  github.ref == 'refs/heads/develop'
+    name: Deploy PDP To Production
+    steps:
+      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
+      - name: Deployinf PDP To Production
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: 'Mona the Octocat'
+        id: hello
+      # This step prints an output (time) from the previous step's action.
+      - name: Echo the greeting's time
+        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
