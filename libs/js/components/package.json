@@ -24,7 +24,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest -c jest.config.js --coverage --watchAll --no-watchman"
+    "test": "jest -c jest.config.js --coverage --no-watchman",
+    "test:watch": "jest -c jest.config.js --watchAll --no-watchman"
   },
   "dependencies": {
     "styled-components": "^4.4.1"
