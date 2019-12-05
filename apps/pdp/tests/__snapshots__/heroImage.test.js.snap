@@ -7,7 +7,7 @@ exports[`HeroImage Discounted price contains discounted class 1`] = `
   <figure>
     <img
       alt="Alpha SV Jacket Men's Trail Blaze"
-      className="sc-bdVaJa fyFCbK"
+      className="heroImage__Image-sc-1w1rqg8-0 hWmYwM"
       data-colour-name="Trail"
       data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Alpha-SV-Jacket-Trail-Blaze.jpg?auto=format&w=1350"
       data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Alpha-SV-Jacket-Trail-Blaze.png?auto=format"
@@ -15,7 +15,7 @@ exports[`HeroImage Discounted price contains discounted class 1`] = `
       src="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Alpha-SV-Jacket-Trail-Blaze.png?auto=format"
     />
     <figcaption
-      className="sc-bwzfXH eKeXgs"
+      className="heroImage__Figcaption-sc-1w1rqg8-1 docTtJ"
     >
       Alpha SV Jacket
     </figcaption>

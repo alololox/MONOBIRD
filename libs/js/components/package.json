@@ -18,12 +18,14 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
+    "jest-styled-components": "^6.3.4",
     "lerna": "^3.16.4"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest -c jest.config.js --coverage --watchAll --no-watchman"
+    "test": "jest -c jest.config.js --coverage --no-watchman",
+    "test:watch": "jest -c jest.config.js --watchAll --no-watchman"
   },
   "dependencies": {
     "styled-components": "^4.4.1"
