@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dirty Little ProductTile Test Renders ProductTile 1`] = `
+<DocumentFragment>
+  <div>
+    <h3>
+      product
+    </h3>
+    <img
+      src="//placehold.it/250x250"
+    />
+  </div>
+</DocumentFragment>
+`;

@@ -1,65 +1,47 @@
 {
-	"name": "pdp",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"dev": "node server.js",
-		"build": "next build",
-		"start": "next start",
-		"test": "jest",
-		"test-watch": "jest --watch",
-		"updateSnapshot": "jest --updateSnapshot",
-		"testCoverage": "jest",
-		"export": "next export"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"compression": "^1.7.4",
-		"express": "^4.17.1",
-		"next": "^9.1.4",
-		"next-routes": "^1.4.2",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"styled-components": "^4.4.1",
-		"universal-cookie-express": "^4.0.1"
-	},
-	"devDependencies": {
-		"babel-jest": "^24.9.0",
-		"enzyme": "^3.10.0",
-		"enzyme-adapter-react-16": "^1.15.1",
-		"enzyme-to-json": "^3.4.3",
-		"jest": "^24.9.0"
-	},
-	"jest": {
-		"moduleNameMapper": {
-			".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
-		},
-		"snapshotSerializers": [
-			"enzyme-to-json/serializer"
-		],
-		"setupFiles": [
-			"./tests/setup.js"
-		],
-		"collectCoverageFrom": [
-			"<rootDir>/components/**/*.{ts,tsx,js,jsx}"
-		],
-		"collectCoverage": true,
-		"coverageReporters": [
-			"text-summary",
-			"lcov",
-			"text",
-			"clover"
-		],
-		"coverageThreshold": {
-			"global": {
-				"branches": 0,
-				"functions": 65,
-				"lines": 65,
-				"statements": 60
-			}
-		}
-	}
+  "name": "pdp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "updateSnapshot": "jest --updateSnapshot",
+    "testCoverage": "jest",
+    "export": "next export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "next": "^9.1.4",
+    "next-routes": "^1.4.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1",
+    "universal-cookie-express": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./tests/setup.js"
+    ]
+  }
 }
