@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install AWS CLI
-    - run: apt-get update && apt-get install aws-cli && aws --version 
+      run: apt-get update && apt-get install aws-cli && aws --version 
+      
 
 
     
