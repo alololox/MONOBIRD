@@ -11,7 +11,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
-      run: aws --version 
+      run: aws s3 cp libs/js/elfo/hello.txt s3://arcteryx-monobird-cd-poc/hello.txt
       
 
 
