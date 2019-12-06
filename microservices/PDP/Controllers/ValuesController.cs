@@ -55,7 +55,7 @@ namespace cdp_api.Controllers
           
             
             var c = _clientFactory.CreateClient("pim");
-            var resp = await c.GetAsync("https://localhost:44379/api/values/6202");
+            var resp = await c.GetAsync(_apiPath + value);
             if (resp.IsSuccessStatusCode)
             {
 var data = await resp.Content.ReadAsStringAsync();
