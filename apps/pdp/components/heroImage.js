@@ -24,7 +24,7 @@ const HeroImage = () => (
         data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Axe-Keeper-Black.jpg?auto=format&amp;w=1350"
         data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
       />
-      <Figcaption>Alpha SV Jacket</Figcaption>
+      <Figcaption>Axe Keeper Black</Figcaption>
     </figure>
   </div>
 );
