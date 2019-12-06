@@ -7,6 +7,8 @@ jobs:
   deploy-qa:
     runs-on: ubuntu-latest
     steps:
+    - name: Where am I?
+      run: pwd
     - name: copy to s3
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
