@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using cdp_api.Helpers;
 using cdp_api.models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging.Abstractions;
 using Newtonsoft.Json;
 
 namespace cdp_api.Controllers
@@ -60,7 +55,7 @@ namespace cdp_api.Controllers
           
             
             var c = _clientFactory.CreateClient("pim");
-            var resp = await c.GetAsync("https://localhost:5001/api/values/6202");
+            var resp = await c.GetAsync(_apiPath + value);
             if (resp.IsSuccessStatusCode)
             {
 var data = await resp.Content.ReadAsStringAsync();
