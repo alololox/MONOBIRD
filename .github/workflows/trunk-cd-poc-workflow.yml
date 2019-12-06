@@ -1,12 +1,8 @@
 name: PDP
 on:
-  pull_request:
   push:
     branches: 
       - morgan/trunk-cd-poc
-    paths:
-      - 'apps/libs/js/elfo/*'
-
 jobs:
   deploy-qa:
     runs-on: ubuntu-latest
