@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "PDP_API=http://localhost:5002/api/values node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "test": "jest",
@@ -19,6 +19,7 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.1.4",
     "next-routes": "^1.4.2",
     "next-transpile-modules": "^2.3.1",
