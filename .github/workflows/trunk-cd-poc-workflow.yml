@@ -1,4 +1,4 @@
-name: PDP
+name: CD TRUNK POC
 on:
   push:
     branches: 
@@ -7,7 +7,10 @@ jobs:
   deploy-qa:
     runs-on: ubuntu-latest
     steps:
-    - name: Install AWS CLI
+    - name: copy to s3
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
       run: aws --version 
       
 
