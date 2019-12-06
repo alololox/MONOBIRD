@@ -8,7 +8,7 @@ Built using .NET SDK 2.1.
 
 ## Debugging
 
-- Copy and paste the launch.json and tasks.json under the .vscode or .vs folder at the root of the MONOBIRD project folder.
+- Copy and paste the launch.json and tasks.json under the .vscode or .vs folder at the root of the microservices project folder.
 
 ## Steps to run
 
