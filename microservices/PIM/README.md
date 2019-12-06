@@ -34,6 +34,6 @@ Built using .NET SDK 2.1.
 
 2. Create and run our container
 
-> docker run -d -p 5000:80 -p 5001:443 -e ASPNETCORE_HTTPS_PORT=5001 -e ASPNETCORE_URLS="https://+;http://+" -e Kestrel**Certificates**Default**Path=/https/cert-aspnetcore.pfx -e Kestrel**Certificates**Default**Password=ufo -v \${PWD}/https:/https --name arc-pim dotnet-pim
+> docker run -d -p 5000:80 -p 5001:443 -e ASPNETCORE_HTTPS_PORT=5001 -e ASPNETCORE_URLS="https://+;http://+" -e Kestrel__Certificates__Default__Path=/https/cert-aspnetcore.pfx -e Kestrel__Certificates__Default__Password=ufo -v ${PWD}/https:/https --name arc-pim dotnet-pim
 
 3. Go to https://localhost:5001/api/values/6202
