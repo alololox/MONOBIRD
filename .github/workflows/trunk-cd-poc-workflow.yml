@@ -11,11 +11,9 @@ jobs:
   deploy-qa:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Build a QA environment for a PR
-    - run: apt-get update
-    - run: apt-get install aws-cli
-    - run: aws --version  
+    - name: Install AWS CLI
+    - run: apt-get update && apt-get install aws-cli && aws --version 
+
 
     
 
