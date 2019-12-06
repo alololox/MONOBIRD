@@ -7,6 +7,7 @@ jobs:
   deploy-qa:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
     - name: Where am I?
       run: pwd
     - name: What are my files
