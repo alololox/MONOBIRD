@@ -1,0 +1,23 @@
+{
+  "name": "@arcteryx/helpers-cookies",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "source": "src/index.js",
+  "scripts": {
+    "build": "microbundle"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-polyfill": "^6.26.0",
+    "microbundle": "^0.11.0",
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}

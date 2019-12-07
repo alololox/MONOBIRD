@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  gateway:
+    image: 'haproxy:2.1'
+    container_name: 'arc-gateway'
+    ports: ['80:80']
+    env_file:
+      - .env    
+    volumes:
+      - ${MOUNT_DIR}/haproxy/:/usr/local/etc/haproxy:ro

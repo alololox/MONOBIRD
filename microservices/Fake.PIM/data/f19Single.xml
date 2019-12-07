@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<records>
+  <record>
+    <fields>
+      <field name="id">
+        <values>
+          <value>6202</value>
+        </values>
+      </field>
+      <field name="publish">
+        <values>
+          <value region="AT">true</value>
+          <value region="BE">true</value>
+          <value region="CA">true</value>
+          <value region="CH">true</value>
+          <value region="CN">false</value>
+          <value region="CZ">true</value>
+          <value region="DE">true</value>
+          <value region="DK">true</value>
+          <value region="ES">true</value>
+          <value region="FI">true</value>
+          <value region="FR">true</value>
+          <value region="GB">true</value>
+          <value region="IE">true</value>
+          <value region="IT">true</value>
+          <value region="JP">false</value>
+          <value region="NL">true</value>
+          <value region="NO">true</value>
+          <value region="PL">true</value>
+          <value region="SE">true</value>
+          <value region="US">true</value>
+        </values>
+      </field>
+      <field name="name">
+        <values>
+          <value language="FR"><![CDATA[Porte-piolet]]></value>
+          <value language="ES"><![CDATA[Portapiquetas]]></value>
+          <value language="DE"><![CDATA[Eisgeräthalterung]]></value>
+          <value language="EN"><![CDATA[Axe Keeper]]></value>
+          <value language="ZH"><![CDATA[冰镐环]]></value>
+          <value language="JP"><![CDATA[アックス キーパー]]></value>
+          <value language="NO"><![CDATA[Axe Keeper]]></value>
+        </values>
+      </field>
+      <field name="weight">
+        <values>
+          <value>10.00</value>
+        </values>
+      </field>
+      <field name="new">
+        <values>
+          <value>False</value>
+        </values>
+      </field>
+      <field name="revised">
+        <values>
+          <value>False</value>
+        </values>
+      </field>
+      <field name="web">
+        <values>
+          <value>False</value>
+        </values>
+      </field>
+      <field name="pro">
+        <values>
+          <value>False</value>
+        </values>
+      </field>
+      <field name="subname">
+        <values>
+          <value language="FR"><![CDATA[Sangle velcro pour piolet.]]></value>
+          <value language="ES"><![CDATA[Cinta con velcro para sujeción de piqueta.]]></value>
+          <value language="DE"><![CDATA[Klettverschlussband für Eispickel.]]></value>
+          <value language="EN"><![CDATA[Velcro ice axe strap.]]></value>
+          <value language="ZH"><![CDATA[魔术贴冰镐带。]]></value>
+          <value language="JP"><![CDATA[ベルクロ アイスアックス ストラップ。]]></value>
+          <value language="NO"><![CDATA[Isøksstropp med borrelås.]]></value>
+        </values>
+      </field>
+      <field name="shortdescription">
+        <values>
+          <value language="FR"><![CDATA[Sangle Velcro® à dégagement rapide pour les piolets]]></value>
+          <value language="ES"><![CDATA[Cinta de Velcro® para sujeción rápida de piquetas]]></value>
+          <value language="DE"><![CDATA[Schnell zu öffnender Klettverschluss zur Befestigung von Eisgeräten]]></value>
+          <value language="EN"><![CDATA[Quick release Velcro® strap for attaching ice axes]]></value>
+          <value language="ZH"><![CDATA[速放冰镐Velcro®魔术贴带]]></value>
+          <value language="JP"><![CDATA[Velcro® ストラップでピッケルをすばやく着脱できます。]]></value>
+          <value language="NO"><![CDATA[Velcro®-stropp med hurtigutløsning for isøkser]]></value>
+        </values>
+      </field>
+      <field name="longdescription">
+        <values>
+          <value language="FR"><![CDATA[Sangle Velcro® à dégagement rapide pour les piolets]]></value>
+          <value language="ES"><![CDATA[Cinta de Velcro® para sujeción rápida de piquetas.]]></value>
+          <value language="DE"><![CDATA[Schnell zu öffnender Klettverschluss zur Befestigung von Eisgeräten]]></value>
+          <value language="EN"><![CDATA[Quick release Velcro® strap for attaching ice axes.]]></value>
+          <value language="ZH"><![CDATA[速放冰镐Velcro®魔术贴带]]></value>
+          <value language="JP"><![CDATA[Velcro® ストラップでピッケルをすばやく着脱できます。]]></value>
+          <value language="NO"><![CDATA[Velcro®-stropp med hurtigutløsning for isøkser]]></value>
+        </values>
+      </field>
+      <field name="rating">
+        <values>
+          <value>0</value>
+        </values>
+      </field>
+      <field name="review_count">
+        <values>
+          <value>0</value>
+        </values>
+      </field>
+      <field name="gender">
+        <values>
+          <value>NEUTRAL</value>
+        </values>
+      </field>
+      <field name="season">
+        <values>
+          <value>F 2019</value>
+        </values>
+      </field>
+      <field name="prices">
+        <values>
+          <value currency="CA_CAD">20.00</value>
+          <value currency="AT_EUR">12.00</value>
+          <value currency="BE_EUR">12.00</value>
+          <value currency="CZ_EUR">12.00</value>
+          <value currency="DE_EUR">12.00</value>
+          <value currency="ES_EUR">12.00</value>
+          <value currency="FI_EUR">12.00</value>
+          <value currency="FR_EUR">12.00</value>
+          <value currency="IE_EUR">12.00</value>
+          <value currency="IT_EUR">12.00</value>
+          <value currency="NL_EUR">12.00</value>
+          <value currency="DK_DKK">89.00</value>
+          <value currency="NO_NOK">129.00</value>
+          <value currency="GB_GBP">10.00</value>
+          <value currency="CH_CHF">10.00</value>
+          <value currency="SE_SEK">129.00</value>
+          <value currency="PL_PLN">30.00</value>
+          <value currency="US_USD">10.00</value>
+        </values>
+      </field>
+      <field name="url">
+        <values>
+          <value>Axe-Keeper</value>
+        </values>
+      </field>
+      <field name="full_url">
+        <values>
+          <value>https://arcteryx.com/shop/Axe-Keeper</value>
+        </values>
+      </field>
+      <field name="images">
+        <values>
+          <value>https://images.arcteryx.com/F19/162x205/Axe-Keeper-Black.gif</value>
+          <value>https://images.arcteryx.com/F19/350w/Axe-Keeper-Black.jpg</value>
+        </values>
+      </field>
+      <field name="alt_image">
+        <values>
+          <value />
+        </values>
+      </field>
+      <field name="ROCK_warehouse">
+        <values>
+          <value>49</value>
+        </values>
+      </field>
+      <field name="UBER_warehouse">
+        <values>
+          <value>0</value>
+        </values>
+      </field>
+      <field name="VAN_warehouse">
+        <values>
+          <value>37</value>
+        </values>
+      </field>
+      <field name="color">
+        <attributes>
+          <attribute code="BLK" hexColor="000000" baseColor="BLACK">
+            <value>Black</value>
+            <publish region="AT">true</publish>
+            <publish region="BE">true</publish>
+            <publish region="CA">true</publish>
+            <publish region="CH">true</publish>
+            <publish region="CN">true</publish>
+            <publish region="CZ">true</publish>
+            <publish region="DE">true</publish>
+            <publish region="DK">true</publish>
+            <publish region="ES">true</publish>
+            <publish region="FI">true</publish>
+            <publish region="FR">true</publish>
+            <publish region="GB">true</publish>
+            <publish region="IE">true</publish>
+            <publish region="IT">true</publish>
+            <publish region="JP">false</publish>
+            <publish region="NL">true</publish>
+            <publish region="NO">true</publish>
+            <publish region="PL">true</publish>
+            <publish region="SE">true</publish>
+            <publish region="US">true</publish>
+            <field name="images">
+              <values>
+                <value>https://images.arcteryx.com/F19/162x205/Axe-Keeper-Black.gif</value>
+                <value>https://images.arcteryx.com/F19/350w/Axe-Keeper-Black.jpg</value>
+              </values>
+            </field>
+            <field name="size_ROCK">
+              <attributes>
+                <attribute code="NA">
+                  <value>NA</value>
+                  <field name="sku">
+                    <values>
+                      <value>56568</value>
+                    </values>
+                  </field>
+                  <stock>49</stock>
+                </attribute>
+              </attributes>
+            </field>
+            <field name="size_UBER">
+              <attributes>
+                <attribute code="NA">
+                  <value>NA</value>
+                  <field name="sku">
+                    <values>
+                      <value>56568</value>
+                    </values>
+                  </field>
+                  <stock>0</stock>
+                </attribute>
+              </attributes>
+            </field>
+            <field name="size_VAN">
+              <attributes>
+                <attribute code="NA">
+                  <value>NA</value>
+                  <field name="sku">
+                    <values>
+                      <value>56568</value>
+                    </values>
+                  </field>
+                  <stock>37</stock>
+                </attribute>
+              </attributes>
+            </field>
+            <stock>0</stock>
+          </attribute>
+        </attributes>
+      </field>
+      <field name="fit">
+        <values />
+      </field>
+    </fields>
+    <categories>
+      <categorytree>
+        <category uniqueid="WEBCOLLECTION" publish="true">
+          <values>
+            <value language="FR"><![CDATA[WEBCOLLECTION]]></value>
+            <value language="ES"><![CDATA[WEBCOLLECTION]]></value>
+            <value language="DE"><![CDATA[WEBCOLLECTION]]></value>
+            <value language="EN"><![CDATA[WEBCOLLECTION]]></value>
+            <value language="ZH"><![CDATA[WEBCOLLECTION]]></value>
+            <value language="JP"><![CDATA[WEBCOLLECTION]]></value>
+            <value language="NO"><![CDATA[WEBCOLLECTION]]></value>
+          </values>
+        </category>
+        <category uniqueid="alpinismandclimbing" publish="true">
+          <values>
+            <value language="FR"><![CDATA[Alpinism and Climbing:::Alpinisme et escalade]]></value>
+            <value language="ES"><![CDATA[Alpinism and Climbing:::Alpinismo y escalada]]></value>
+            <value language="DE"><![CDATA[Alpinism and Climbing:::Alpinismus und Klettern]]></value>
+            <value language="EN"><![CDATA[Alpinism and Climbing:::Alpinism and Climbing]]></value>
+            <value language="ZH"><![CDATA[Alpinism and Climbing:::登山&攀岩]]></value>
+            <value language="JP"><![CDATA[Alpinism and Climbing:::アルピニズム & クライミング]]></value>
+            <value language="NO"><![CDATA[Alpinism and Climbing:::Alpinisme og klatring]]></value>
+          </values>
+        </category>
+      </categorytree>
+      <categorytree>
+        <category uniqueid="WEBCAT" publish="true">
+          <values>
+            <value language="FR"><![CDATA[WEBCAT]]></value>
+            <value language="ES"><![CDATA[WEBCAT]]></value>
+            <value language="DE"><![CDATA[WEBCAT]]></value>
+            <value language="EN"><![CDATA[WEBCAT]]></value>
+            <value language="ZH"><![CDATA[WEBCAT]]></value>
+            <value language="JP"><![CDATA[WEBCAT]]></value>
+            <value language="NO"><![CDATA[WEBCAT]]></value>
+          </values>
+        </category>
+        <category uniqueid="packs" publish="true">
+          <values>
+            <value language="FR"><![CDATA[Packs:::Sacs]]></value>
+            <value language="ES"><![CDATA[Packs:::Mochilas]]></value>
+            <value language="DE"><![CDATA[Packs:::Rucksäcke]]></value>
+            <value language="EN"><![CDATA[Packs:::Packs]]></value>
+            <value language="ZH"><![CDATA[Packs:::背包]]></value>
+            <value language="JP"><![CDATA[Packs:::パック]]></value>
+            <value language="NO"><![CDATA[Packs:::Sekker]]></value>
+          </values>
+        </category>
+      </categorytree>
+      <categorytree>
+        <category uniqueid="WEBSUBCAT" publish="true">
+          <values>
+            <value language="FR"><![CDATA[WEBSUBCAT]]></value>
+            <value language="ES"><![CDATA[WEBSUBCAT]]></value>
+            <value language="DE"><![CDATA[WEBSUBCAT]]></value>
+            <value language="EN"><![CDATA[WEBSUBCAT]]></value>
+            <value language="ZH"><![CDATA[WEBSUBCAT]]></value>
+            <value language="JP"><![CDATA[WEBSUBCAT]]></value>
+            <value language="NO"><![CDATA[WEBSUBCAT]]></value>
+          </values>
+        </category>
+        <category uniqueid="packaccessories" publish="true">
+          <values>
+            <value language="FR"><![CDATA[Pack Accessories:::Accessoires pour sacs-à-dos]]></value>
+            <value language="ES"><![CDATA[Pack Accessories:::Accesorios para la mochila]]></value>
+            <value language="DE"><![CDATA[Pack Accessories:::Rucksackzubehör]]></value>
+            <value language="EN"><![CDATA[Pack Accessories:::Pack Accessories]]></value>
+            <value language="ZH"><![CDATA[Pack Accessories:::背包配件]]></value>
+            <value language="JP"><![CDATA[Pack Accessories:::パックアクセサリ]]></value>
+            <value language="NO"><![CDATA[Pack Accessories:::Tilbehør til sekker]]></value>
+          </values>
+        </category>
+      </categorytree>
+    </categories>
+  </record>
+</records>

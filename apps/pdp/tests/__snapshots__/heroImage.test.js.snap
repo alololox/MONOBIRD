@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroImage Discounted price contains discounted class 1`] = `
+<div
+  className="product-image"
+>
+  <figure>
+    <img
+      alt="Axe Keeper Black"
+      className="heroImage__Image-sc-1w1rqg8-0 hWmYwM"
+      data-colour-name="Black"
+      data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Axe-Keeper-Black.jpg?auto=format&w=1350"
+      data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
+      itemType="image"
+      src="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
+    />
+    <figcaption
+      className="heroImage__Figcaption-sc-1w1rqg8-1 docTtJ"
+    >
+      Axe Keeper Black
+    </figcaption>
+  </figure>
+</div>
+`;

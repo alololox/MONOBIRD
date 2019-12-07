@@ -1,0 +1,33 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-docs": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addon-storyshots": "^5.2.8",
+    "@storybook/addon-storysource": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^6.3.4",
+    "lerna": "^3.16.4"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "test": "jest -c jest.config.js --coverage --no-watchman",
+    "test:watch": "jest -c jest.config.js --watchAll --no-watchman"
+  },
+  "dependencies": {
+    "styled-components": "^4.4.1"
+  }
+}
