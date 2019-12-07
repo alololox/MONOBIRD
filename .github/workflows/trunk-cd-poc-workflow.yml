@@ -43,7 +43,10 @@ jobs:
       run: cat $GITHUB_EVENT_PATH
     
     - name: Add Environment to description
-      run: jq --raw-output .pull_request "$GITHUB_EVENT_PATH"
+      run: jq --raw-output .pull_request.body "$GITHUB_EVENT_PATH"
+
+    - name: Add Environment to description
+      run: jq --raw-output .pull_request._links.self.href "$GITHUB_EVENT_PATH"
       
     - name: Comment on the PR with a link to the QA environment
       run: |
