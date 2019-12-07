@@ -6,6 +6,6 @@
 <h1>I'm elfo</h1>
 <p>Bean: 'What's this weird feeling I don't want to drink away?' </p>
 <p>Elfo: 'That's hope. That's hope!' </p>
-<img src="https://66.media.tumblr.com/01fc8456ff882e116d587b394d9bf2ae/tumblr_py7m8bWWkX1s4434to1_1280.png">
+<img src="https://i.imgur.com/q58SnwN.jpg">
 </body>
 </html>
