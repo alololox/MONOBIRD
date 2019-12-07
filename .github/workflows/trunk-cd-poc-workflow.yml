@@ -1,9 +1,9 @@
-name: CD TRUNK POC
+name: Elfo
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
-  S3_QA_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt  
-  S3_PROD_URL: s3://arcteryx-monobird-cd-poc/hello.txt
+  S3_QA_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/index.html
+  S3_PROD_URL: s3://arcteryx-monobird-cd-poc/index.html
   ARTIFACT_PATH: libs/js/elfo/hello.txt
 on:
   pull_request:
@@ -11,14 +11,17 @@ on:
       - morgan/trunk-cd-poc
     paths:
       - libs/js/elfo/*
+      - .github/workflows/trunk-cd-poc-workflow.yml
   push:
     branches: 
       - morgan/trunk-cd-poc
     paths:
       - libs/js/elfo/*
+      - .github/workflows/trunk-cd-poc-workflow.yml
 jobs:
   deploy-prod:
     if: github.event_name == 'push'
+    name: Deploy To Production
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -27,7 +30,7 @@ jobs:
       
   deploy-qa:
     if: github.event_name == 'pull_request'
-    name: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt 
+    name: Build QA Environment
     #if: github.event_name == 'pull_request' && github.ref == 'refs/heads/morgan/trunk-cd-poc'
     runs-on: ubuntu-latest
     steps:
