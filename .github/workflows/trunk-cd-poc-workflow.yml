@@ -59,7 +59,7 @@ jobs:
           "state": "pending",
           "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
           "description": "Manual checks",
-          "context": "qa'
+          "context": "qa"
           }'
 
     - name: Comment on the PR with a link to the QA environment
