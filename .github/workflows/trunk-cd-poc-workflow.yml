@@ -24,7 +24,6 @@ jobs:
   deploy-qa:
     name: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt
     env:
-      QA_URL: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt
       S3_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt
     #if: github.event_name == 'pull_request' && github.ref == 'refs/heads/morgan/trunk-cd-poc'
     runs-on: ubuntu-latest
@@ -47,7 +46,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to ${{QA_URL}} and merge the pull request when ready"
+          "body": "GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt and merge the pull request when ready"
           }'
 
 
