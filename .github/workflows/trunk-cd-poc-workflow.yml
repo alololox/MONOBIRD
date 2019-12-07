@@ -12,6 +12,8 @@ on:
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
+  pull_request_review_comment:
+    types: [created]
   push:
     branches: 
       - master
@@ -74,4 +76,10 @@ jobs:
           "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} has created an environment for testing. \n\n Review proposed functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html \n\n Approve the pull request when ready \n\n Review Production functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/index.html"
           }'
 
-
+  approve-qa:
+    if: github.event_name == 'pull_request_review_comment'
+    name: QA Pass
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump payload
+        run: cat $GITHUB_EVENT_PATH
