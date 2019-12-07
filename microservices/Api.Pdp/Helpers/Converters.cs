@@ -10,9 +10,8 @@ namespace Api.Pdp.Helpers
             PdpModel pdpModel = new PdpModel();
 
             //details
-            var x = pimRecord.fields.Where(x => x.name == "id").Select(x => x.values).First();
-            pdpModel.Details.ProductNo = x.Length > 0 ? int.Parse(x[0].Value) : 0;
-            //pdpModel.Details.ProductNo = int.Parse(pimRecord.fields.Where(x => x.name == "id").Select(x => x.values).First()[0].Value.ToString());
+            var productNo = pimRecord.fields.Where(x => x.name == "id").Select(x => x.values).First();
+            pdpModel.Details.ProductNo = productNo.Length > 0 ? int.Parse(productNo[0].Value) : 0;
             pdpModel.Details.LargeImageUrl = "https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"; //hardcoded for now
 
             //translated fields
