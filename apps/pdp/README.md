@@ -34,3 +34,5 @@ Depends on PDP and PIM microservices to be running. Make sure to start those 2 s
 
 Start: `./docker-start.sh`
 Stop: `./docker-stop.sh`
+
+.
