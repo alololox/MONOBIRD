@@ -1,6 +1,8 @@
 name: PDP
 on:
   pull_request:
+    paths:
+      - 'apps/pdp/*'
   push:
     branches: 
       - master

@@ -1,0 +1,51 @@
+name: Elfo
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
+  S3_QA_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/index.html
+  S3_PROD_URL: s3://arcteryx-monobird-cd-poc/index.html
+  ARTIFACT_PATH: libs/js/elfo/hello.txt
+on:
+  pull_request:
+    branches: 
+      - master
+    paths:
+      - libs/js/elfo/*
+      - .github/workflows/trunk-cd-poc-workflow.yml
+  push:
+    branches: 
+      - master
+    paths:
+      - libs/js/elfo/*
+      - .github/workflows/trunk-cd-poc-workflow.yml
+jobs:
+  deploy-prod:
+    if: github.event_name == 'push'
+    name: Deploy To Production
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: copy to s3
+      run: aws s3 cp $ARTIFACT_PATH $S3_PROD_URL --content-type "text/html"
+      
+  deploy-qa:
+    if: github.event_name == 'pull_request'
+    name: Build QA Environment
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Create QA environment
+      run: aws s3 cp $ARTIFACT_PATH $S3_QA_URL --content-type "text/html"
+    - name: Comment on the PR with a link to the QA environment
+      run: |
+        COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && \
+        curl --request POST \
+        --url ${COMMENTS_URL} \
+        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "title": "QA Environment Created For ${{ github.sha }}",
+          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} has created an environment for testing. \n\n Review proposed functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html \n\n Approve the pull request when ready \n\n Review Production functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/index.html"
+          }'
+
+
