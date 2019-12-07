@@ -85,5 +85,5 @@ jobs:
         run: cat $GITHUB_EVENT_PATH
 
       - name: Dump payload
-        run: jq --raw-output .review "$GITHUB_EVENT_PATH"
+        run: jq --raw-output .review.body "$GITHUB_EVENT_PATH"
 #TEST
