@@ -31,7 +31,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
-      run: aws s3 cp libs/js/elfo/hello.txt s3://arcteryx-monobird-cd-poc/$GITHUB_SHA/hello.txt
+      run: aws s3 cp libs/js/elfo/hello.txt https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/$GITHUB_SHA/hello.txt
 #    - name: What is the event path?
 #      run: cat $GITHUB_EVENT_PATH
 
@@ -43,7 +43,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt to QA it and merge the pull request when ready"
+          "body": "GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt to QA it and merge the pull request when ready"
           }'
 
 
