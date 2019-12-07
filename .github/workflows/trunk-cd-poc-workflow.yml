@@ -8,13 +8,13 @@ env:
 on:
   pull_request:
     branches: 
-      - develop
+      - master
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
   push:
     branches: 
-      - develop
+      - master
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
@@ -31,13 +31,12 @@ jobs:
   deploy-qa:
     if: github.event_name == 'pull_request'
     name: Build QA Environment
-    #if: github.event_name == 'pull_request' && github.ref == 'refs/heads/morgan/trunk-cd-poc'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Create QA environment
       run: aws s3 cp $ARTIFACT_PATH $S3_QA_URL --content-type "text/html"
-    - name: Update the PR to link to the QA environment
+    - name: Comment on the PR with a link to the QA environment
       run: |
         COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && \
         curl --request POST \
@@ -46,7 +45,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} created an environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html and approve the pull request when ready"
+          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} has created an environment for testing. \n\n Review proposed functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html \n\n Approve the pull request when ready \n\n Review Production functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/index.html"
           }'
 
 
