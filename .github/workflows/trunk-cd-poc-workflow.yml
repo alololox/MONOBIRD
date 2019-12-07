@@ -12,7 +12,7 @@ on:
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
-  pull_request_review_comment:
+  issue_comment:
     types: [created]
   push:
     branches: 
@@ -77,9 +77,10 @@ jobs:
           }'
 
   approve-qa:
-    if: github.event_name == 'pull_request_review_comment'
+    if: github.event_name == 'issues_comment'
     name: QA Pass
     runs-on: ubuntu-latest
     steps:
       - name: Dump payload
         run: cat $GITHUB_EVENT_PATH
+#TEST
