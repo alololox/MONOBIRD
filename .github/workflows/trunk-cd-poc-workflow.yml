@@ -78,6 +78,7 @@ jobs:
           }'
 
   approve-qa:
+    if: github.event.review.body == 'QA PASS'
     name: QA Pass
     runs-on: ubuntu-latest
     steps:
