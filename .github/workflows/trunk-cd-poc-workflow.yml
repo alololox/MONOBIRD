@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: copy to s3
-      run: aws s3 cp $ARTIFACT_PATH $S3_PROD_URL
+      run: aws s3 cp $ARTIFACT_PATH $S3_PROD_URL --content-type "text/html"
       
   deploy-qa:
     if: github.event_name == 'pull_request'
@@ -36,7 +36,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Create QA environment
-      run: aws s3 cp $ARTIFACT_PATH $S3_QA_URL
+      run: aws s3 cp $ARTIFACT_PATH $S3_QA_URL --content-type "text/html"
     - name: Update the PR to link to the QA environment
       run: |
         COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && \
@@ -46,7 +46,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt and approve the pull request when ready"
+          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} created an environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html and approve the pull request when ready"
           }'
 
 
