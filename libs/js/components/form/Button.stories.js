@@ -5,6 +5,6 @@ import Button from "./Button";
 
 storiesOf("Button", module).add("text test", () => (
   <>
-    <Button />{" "}
+    <Button />
   </>
 ));
