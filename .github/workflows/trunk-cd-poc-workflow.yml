@@ -2,6 +2,9 @@ name: CD TRUNK POC
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
+  S3_QA_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt  
+  S3_PROD_URL: s3://arcteryx-monobird-cd-poc/hello.txt
+  ARTIFACT_PATH: libs/js/elfo/hello.txt
 on:
   pull_request:
     branches: 
@@ -19,18 +22,16 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: copy to s3
-      run: aws s3 cp libs/js/elfo/hello.txt s3://arcteryx-monobird-cd-poc/hello.txt
+      run: aws s3 cp $ARTIFACT_PATH $S3_PROD_URL
       
   deploy-qa:
     name: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt
-    env:
-      S3_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt
     #if: github.event_name == 'pull_request' && github.ref == 'refs/heads/morgan/trunk-cd-poc'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Create QA environment
-      run: aws s3 cp libs/js/elfo/hello.txt $S3_URL
+      run: aws s3 cp $ARTIFACT_PATH $S3_QA_URL
     - name: Update the PR to link to the QA environment
       run: |
         COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && \
