@@ -46,7 +46,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html and approve the pull request when ready"
+          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} created an environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html and approve the pull request when ready"
           }'
 
 
