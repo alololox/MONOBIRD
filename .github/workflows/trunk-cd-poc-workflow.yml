@@ -10,12 +10,12 @@ on:
     branches: 
       - morgan/trunk-cd-poc
     paths:
-      - libs/js/elfo
+      - libs/js/elfo/*
   push:
     branches: 
       - morgan/trunk-cd-poc
     paths:
-      - libs/js/elfo
+      - libs/js/elfo/*
 jobs:
   deploy-prod:
     if: github.event_name == 'push'
