@@ -83,6 +83,7 @@ jobs:
     steps:
       - name: Dump payload
         run: cat $GITHUB_EVENT_PATH
+
       - name: Dump payload
-        run: jq --raw-output .pull_request "$GITHUB_EVENT_PATH"
+        run: jq --raw-output .review "$GITHUB_EVENT_PATH"
 #TEST
