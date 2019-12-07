@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - name: copy to s3
       run: aws s3 cp $ARTIFACT_PATH $S3_PROD_URL --content-type "text/html"
       
@@ -34,8 +35,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - name: Create QA environment
       run: aws s3 cp $ARTIFACT_PATH $S3_QA_URL --content-type "text/html"
+    
+    - name: Dump payload
+      run: cat $GITHUB_EVENT_PATH
+    
+    - name: Add Environment to description
+      run: (jq --raw-output .pull_request "$GITHUB_EVENT_PATH")
+      
     - name: Comment on the PR with a link to the QA environment
       run: |
         COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && \
