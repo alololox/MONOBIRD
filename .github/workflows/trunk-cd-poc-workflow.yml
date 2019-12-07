@@ -43,13 +43,10 @@ jobs:
         --url ${COMMENTS_URL} \
         --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
         --header 'content-type: application/json' \
+        --fail \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} \
-                   has created an environment for testing. \n\n Review proposed \
-                   functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html \n\n \
-                   Approve the pull request when ready\n\n\
-                   Review Production functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html"
+          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} has created an environment for testing. \n\n Review proposed functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html \n\n Approve the pull request when ready\n\n\ Review Production functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html"
           }'
 
 
