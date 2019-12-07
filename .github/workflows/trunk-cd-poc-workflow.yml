@@ -9,15 +9,16 @@ on:
   pull_request:
     branches: 
       - morgan/trunk-cd-poc
-#  pull_request:
-#    branches: 
-#      - morgan/trunk-cd-poc
-#    paths:
-#      - libs/js/elfo
-
+    paths:
+      - libs/js/elfo
+  push:
+    branches: 
+      - morgan/trunk-cd-poc
+    paths:
+      - libs/js/elfo
 jobs:
   deploy-prod:
-    if: github.event_name == 'never' && github.ref == 'refs/heads/develop'
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -25,7 +26,8 @@ jobs:
       run: aws s3 cp $ARTIFACT_PATH $S3_PROD_URL
       
   deploy-qa:
-    name: ${{S3_QA_URL}}
+    if: github.event_name == 'pull_request'
+    name: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt 
     #if: github.event_name == 'pull_request' && github.ref == 'refs/heads/morgan/trunk-cd-poc'
     runs-on: ubuntu-latest
     steps:
@@ -41,7 +43,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt and merge the pull request when ready"
+          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt and approve the pull request when ready"
           }'
 
 
