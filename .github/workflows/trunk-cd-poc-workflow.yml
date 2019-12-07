@@ -77,7 +77,7 @@ jobs:
           }'
 
   approve-qa:
-    if: github.event_name == 'issues_comment'
+    if: github.event_name == 'issue_comment'
     name: QA Pass
     runs-on: ubuntu-latest
     steps:
