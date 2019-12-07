@@ -82,5 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dump payload
+        run: cat $GITHUB_EVENT_PATH
+      - name: Dump payload
         run: jq --raw-output .pull_request.review.comment "$GITHUB_EVENT_PATH"
 #TEST
