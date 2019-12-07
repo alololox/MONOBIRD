@@ -1,10 +1,10 @@
-Bean: 'What's this weird feeling I don't want to drink away?' 
-Elfo: 'That's hope. That's hope!'
-.
-I'm elfo
-I'm elfo
-I'm elfo
-I'm elfo
-I'm elfo
-I'm elfo and I want a new QA environment
+
+
+<!DOCTYPE html>
+<html>
+<body>
 <h1>I'm elfo</h1>
+<p>Bean: 'What's this weird feeling I don't want to drink away?' </p>
+<p>Elfo: 'That's hope. That's hope!' </p>
+</body>
+</html>
