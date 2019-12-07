@@ -23,6 +23,9 @@ jobs:
       
   deploy-qa:
     name: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt
+    env:
+      QA_URL: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt
+      S3_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/hello.txt
     #if: github.event_name == 'pull_request' && github.ref == 'refs/heads/morgan/trunk-cd-poc'
     runs-on: ubuntu-latest
     steps:
@@ -31,19 +34,20 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.MONOBIRD_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
-      run: aws s3 cp libs/js/elfo/hello.txt https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/$GITHUB_SHA/hello.txt
+      run: aws s3 cp libs/js/elfo/hello.txt $(S3_URL)
 #    - name: What is the event path?
 #      run: cat $GITHUB_EVENT_PATH
 
     - name: Update the PR to link to the QA environment
       run: |
-        COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && curl --request POST \
+        COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && \
+        curl --request POST \
         --url ${COMMENTS_URL} \
         --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
         --header 'content-type: application/json' \
         --data '{
           "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/hello.txt to QA it and merge the pull request when ready"
+          "body": "GitHub Action workflow ${{ github.workflow }} created a environment. \n\n Go to $QA_URL and merge the pull request when ready"
           }'
 
 
