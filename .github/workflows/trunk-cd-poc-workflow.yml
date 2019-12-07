@@ -8,13 +8,13 @@ env:
 on:
   pull_request:
     branches: 
-      - morgan/trunk-cd-poc
+      - develop
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
   push:
     branches: 
-      - morgan/trunk-cd-poc
+      - develop
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
