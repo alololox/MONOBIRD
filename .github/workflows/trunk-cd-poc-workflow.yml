@@ -53,7 +53,7 @@ jobs:
         STATUSES_URL=$(jq --raw-output .pull_request._links.statuses.href "$GITHUB_EVENT_PATH") && \
         curl --request POST \
         --url ${STATUSES_URL} \
-        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        --header 'authorization: Bearer ${{ secrets.CREATE_STATUS_TOKEN }}' \
         --header 'content-type: application/json' \
         --data '{
           "state": "pending",
