@@ -12,12 +12,21 @@ on:
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
+
   push:
     branches: 
       - master
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
+
+  pull_request_review:
+    branches: 
+      - master
+    paths:
+      - libs/js/elfo/*
+      - .github/workflows/trunk-cd-poc-workflow.yml
+
 jobs:
   deploy-prod:
     if: github.event_name == 'push'
@@ -51,3 +60,39 @@ jobs:
           "description": "Manual checks",
           "context": "qa"
           }'
+  
+  pass-qa:
+    if: github.event_name == 'pull_request_review' && startsWith(github.event.review.body, 'QA PASS')
+    name: QA Pass
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set QA status to success
+      run: |
+        curl --request POST \
+        --url ${{github.event.pull_request._links.statuses.href}} \
+        --header 'authorization: Bearer ${{ secrets.CREATE_STATUS_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "state": "success",
+          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "description": "Manual checks",
+          "context": "qa"
+          }'
+  
+  fail-qa:
+    if: github.event_name == 'pull_request_review' && startsWith(github.event.review.body, 'QA FAIL')
+    name: QA Fail
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set QA status to fail
+      run: |
+        curl --request POST \
+        --url ${{github.event.pull_request._links.statuses.href}} \
+        --header 'authorization: Bearer ${{ secrets.CREATE_STATUS_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "state": "failure",
+          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "description": "Manual checks",
+          "context": "qa"
+          }'       
