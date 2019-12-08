@@ -12,12 +12,21 @@ on:
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
+
   push:
     branches: 
       - master
     paths:
       - libs/js/elfo/*
       - .github/workflows/trunk-cd-poc-workflow.yml
+
+  pull_request_review:
+    branches: 
+      - master
+    paths:
+      - libs/js/elfo/*
+      - .github/workflows/trunk-cd-poc-workflow.yml
+
 jobs:
   deploy-prod:
     if: github.event_name == 'push'
@@ -25,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - name: copy to s3
       run: aws s3 cp $ARTIFACT_PATH $S3_PROD_URL --content-type "text/html"
       
@@ -34,18 +44,55 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - name: Create QA environment
       run: aws s3 cp $ARTIFACT_PATH $S3_QA_URL --content-type "text/html"
-    - name: Comment on the PR with a link to the QA environment
+    
+    - name: Create a status
       run: |
-        COMMENTS_URL=$(jq --raw-output .pull_request._links.comments.href "$GITHUB_EVENT_PATH") && \
         curl --request POST \
-        --url ${COMMENTS_URL} \
-        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        --url ${{github.event.pull_request._links.statuses.href}} \
+        --header 'authorization: Bearer ${{ secrets.CREATE_STATUS_TOKEN }}' \
         --header 'content-type: application/json' \
         --data '{
-          "title": "QA Environment Created For ${{ github.sha }}",
-          "body": "@arcmodal GitHub Action workflow ${{ github.workflow }} has created an environment for testing. \n\n Review proposed functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html \n\n Approve the pull request when ready \n\n Review Production functionality here: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/index.html"
+          "state": "pending",
+          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "description": "Manual checks",
+          "context": "qa"
           }'
-
-
+  
+  pass-qa:
+    if: github.event_name == 'pull_request_review' && startsWith(github.event.review.body, 'QA PASS')
+    name: QA Pass
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set QA status to success
+      run: |
+        curl --request POST \
+        --url ${{github.event.pull_request._links.statuses.href}} \
+        --header 'authorization: Bearer ${{ secrets.CREATE_STATUS_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "state": "success",
+          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "description": "Manual checks",
+          "context": "qa"
+          }'
+  
+  fail-qa:
+    if: github.event_name == 'pull_request_review' && startsWith(github.event.review.body, 'QA FAIL')
+    name: QA Fail
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set QA status to fail
+      run: |
+        curl --request POST \
+        --url ${{github.event.pull_request._links.statuses.href}} \
+        --header 'authorization: Bearer ${{ secrets.CREATE_STATUS_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "state": "failure",
+          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "description": "Manual checks",
+          "context": "qa"
+          }'       
