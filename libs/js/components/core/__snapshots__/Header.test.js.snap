@@ -56,6 +56,12 @@ exports[`Dirty Little Header Test Renders Header 1`] = `
   text-decoration: underline;
 }
 
+.c4 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     class="c0"
   >
@@ -69,22 +75,42 @@ exports[`Dirty Little Header Test Renders Header 1`] = `
       <li
         class="c3"
       >
-        Monobird
+        <a
+          class="c4"
+          href="/"
+        >
+          Monobird
+        </a>
       </li>
       <li
         class="c3"
       >
-        Men's
+        <a
+          class="c4"
+          href="/c/mens"
+        >
+          Mens
+        </a>
       </li>
       <li
         class="c3"
       >
-        Women's
+        <a
+          class="c4"
+          href="/c/womens"
+        >
+          Womens
+        </a>
       </li>
       <li
         class="c3"
       >
-        Explore
+        <a
+          class="c4"
+          href="/explore"
+        >
+          Explore
+        </a>
       </li>
     </ul>
   </div>

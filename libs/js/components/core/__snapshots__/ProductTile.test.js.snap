@@ -2,13 +2,16 @@
 
 exports[`Dirty Little ProductTile Test Renders ProductTile 1`] = `
 <DocumentFragment>
-  <div>
+  <a
+    class="sc-EHOje boeMmq"
+    href="/shop/mens/alpha-sv-jacket"
+  >
     <h3>
-      product
+      Alpha SV Jacket Men's
     </h3>
     <img
       src="//placehold.it/250x250"
     />
-  </div>
+  </a>
 </DocumentFragment>
 `;
