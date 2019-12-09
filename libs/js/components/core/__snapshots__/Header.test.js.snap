@@ -2,35 +2,115 @@
 
 exports[`Dirty Little Header Test Renders Header 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-bdVaJa cMNoxm"
+  .c0 {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  background-color: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.c1 {
+  max-width: 50px;
+  margin-right: 20px;
+}
+
+.c2 {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  color: white;
+  font-family: Helvetica,sans-serif;
+  margin: 15px 10px;
+  list-style: none;
+  font-size: 15px;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="c0"
   >
     <img
-      class="sc-bwzfXH jThacJ"
+      class="c1"
       src="//images.arcteryx.com/foundation-ui/svgs/ArcBirdWhite.svg"
     />
     <ul
-      class="sc-htpNat gtMwsM"
+      class="c2"
     >
       <li
-        class="sc-bxivhb jULzu"
+        class="c3"
       >
-        Monobird
+        <a
+          class="c4"
+          href="/"
+        >
+          Monobird
+        </a>
       </li>
       <li
-        class="sc-bxivhb jULzu"
+        class="c3"
       >
-        Men's
+        <a
+          class="c4"
+          href="/c/mens"
+        >
+          Mens
+        </a>
       </li>
       <li
-        class="sc-bxivhb jULzu"
+        class="c3"
       >
-        Women's
+        <a
+          class="c4"
+          href="/c/womens"
+        >
+          Womens
+        </a>
       </li>
       <li
-        class="sc-bxivhb jULzu"
+        class="c3"
       >
-        Explore
+        <a
+          class="c4"
+          href="/explore"
+        >
+          Explore
+        </a>
       </li>
     </ul>
   </div>
