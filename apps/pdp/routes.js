@@ -1,4 +1,4 @@
 const routes = require("next-routes")();
 
 module.exports = routes;
-routes.add("index", "/shop/:slug*");
+routes.add("index", "/:market/:country/:language/shop/:slug*");
