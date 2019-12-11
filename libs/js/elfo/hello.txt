@@ -10,5 +10,6 @@
 <p><b>Bean:</b> 'What's this weird feeling I don't want to drink away?' </p>
 <p><b>Elfo:</b> 'That's hope. That's hope!' </p>
 <img src="https://i.imgur.com/q58SnwN.jpg">
+<img src="https://media.giphy.com/media/EQuFgzpd2IWGOFfBB7/source.gif">
 </body>
 </html>
