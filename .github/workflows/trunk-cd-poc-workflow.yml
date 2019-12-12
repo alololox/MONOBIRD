@@ -4,6 +4,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.MONOBIRD_SECRET }}
   S3_QA_URL: s3://arcteryx-monobird-cd-poc/${{github.sha}}/index.html
   S3_PROD_URL: s3://arcteryx-monobird-cd-poc/index.html
+  HTTP_QA_URL: https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html
   ARTIFACT_PATH: libs/js/elfo/hello.txt
 on:
   pull_request:
@@ -56,7 +57,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "state": "pending",
-          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "target_url": "'"$HTTP_QA_URL"'",
           "description": "Manual checks",
           "context": "qa"
           }'
@@ -74,7 +75,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "state": "success",
-          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "target_url": "'"$HTTP_QA_URL"'",
           "description": "Manual checks",
           "context": "qa"
           }'
@@ -92,7 +93,7 @@ jobs:
         --header 'content-type: application/json' \
         --data '{
           "state": "failure",
-          "target_url": "https://arcteryx-monobird-cd-poc.s3.us-west-2.amazonaws.com/${{github.sha}}/index.html",
+          "target_url": "'"$HTTP_QA_URL"'",
           "description": "Manual checks",
           "context": "qa"
           }'       
