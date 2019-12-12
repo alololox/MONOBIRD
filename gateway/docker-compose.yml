@@ -8,4 +8,4 @@ services:
     env_file:
       - ${ENV_FILE}
     volumes:
-      - ${MOUNT_DIR}/haproxy/:/usr/local/etc/haproxy:ro
+      - ./haproxy/:/usr/local/etc/haproxy:ro
