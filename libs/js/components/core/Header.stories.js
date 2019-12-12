@@ -5,6 +5,6 @@ import { Header } from "./index.js";
 
 storiesOf("Header", module).add("Header Time", () => (
   <>
-    <Header />
+    <Header title="Monobird"/>
   </>
 ));
