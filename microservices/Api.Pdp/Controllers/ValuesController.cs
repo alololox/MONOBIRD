@@ -34,12 +34,13 @@ namespace Api.Pdp.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<CDP> Get(string id)
+        public ActionResult<PdpModel> Get(string id)
+        
         {
             var data = OnGet(id).Result;
             if(data.Length > 0)
                 _result = JsonConvert.DeserializeObject<recordsRecord>(data); 
-             return _result != null ? _result.toCDP() : null;
+             return _result != null ? _result.toPdpModel() : null;
             
         }
 
