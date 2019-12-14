@@ -16,7 +16,7 @@ function Index(props) {
       <Header title="monobird" />
       <Title name={props.product.name} />
       <Paragraph align="center">
-        Quick release Velcro® strap for attaching ice axes
+        {props.product.details.translatedDescr}
       </Paragraph>
       <HeroImage {...props} />
     </Section>
