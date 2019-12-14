@@ -18,7 +18,7 @@ Depends on PDP and PIM microservices to be running. Make sure to start those 2 s
 2. Start App
    `npm run dev`
 
-3. Go to http://localhost:3000/shop/6202
+3. Go to http://localhost:{PORT}/market/country/language/shop/6202 where default {PORT}=3000
 
 ## Dockerize
 
