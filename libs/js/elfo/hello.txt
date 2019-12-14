@@ -1,8 +1,15 @@
-Bean: 'What's this weird feeling I don't want to drink away?' 
-Elfo: 'That's hope. That's hope!'
-.
-I'm elfo
-I'm elfo
-I'm elfo
-I'm elfo
-I'm elfo
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>I'm Elfo!</h1>
+<p><b>Bean:</b> 'What's this weird feeling I don't want to drink away?' </p>
+<p><b>Elfo:</b> 'That's hope. That's hope!' </p>
+<img src="https://i.imgur.com/q58SnwN.jpg">
+<img src="https://media.giphy.com/media/EQuFgzpd2IWGOFfBB7/source.gif">
+</body>
+</html>

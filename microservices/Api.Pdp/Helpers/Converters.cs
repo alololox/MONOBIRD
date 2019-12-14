@@ -6,6 +6,7 @@ namespace Api.Pdp.Helpers
     public static class Converters
     {
         public static PdpModel toPdpModel(this recordsRecord pimRecord, string language = "en", string region = "ca")
+
         {
             PdpModel pdpModel = new PdpModel();
 
@@ -20,9 +21,8 @@ namespace Api.Pdp.Helpers
             pdpModel.Name = names.FirstOrDefault(x => x.language == language)?.Value;
             pdpModel.Details.TranslatedDescr = descriptions.FirstOrDefault(x => x.language == language)?.Value;
 
-
-            //   cDP.Original = pimRecord; 
             return pdpModel; 
+
         }
     }
 }
