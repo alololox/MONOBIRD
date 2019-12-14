@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "PDP_API=http://localhost:5002/api/values node server.js",
+    "dev": "PDP_API=http://localhost:5002/values node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "test": "jest",
