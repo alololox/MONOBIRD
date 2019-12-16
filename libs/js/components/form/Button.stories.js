@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./index.js";
+import { storiesOf } from "@storybook/react";
 
 export default { component: Button, title: "Button" };
 

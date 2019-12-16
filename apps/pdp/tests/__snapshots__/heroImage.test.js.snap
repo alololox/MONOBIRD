@@ -6,18 +6,18 @@ exports[`HeroImage Discounted price contains discounted class 1`] = `
 >
   <figure>
     <img
-      alt="Alpha SV Jacket Men's Trail Blaze"
+      alt="Axe Keeper Black"
       className="heroImage__Image-sc-1w1rqg8-0 hWmYwM"
-      data-colour-name="Trail"
-      data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Alpha-SV-Jacket-Trail-Blaze.jpg?auto=format&w=1350"
-      data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Alpha-SV-Jacket-Trail-Blaze.png?auto=format"
+      data-colour-name="Black"
+      data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Axe-Keeper-Black.jpg?auto=format&w=1350"
+      data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
       itemType="image"
-      src="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Alpha-SV-Jacket-Trail-Blaze.png?auto=format"
+      src="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
     />
     <figcaption
       className="heroImage__Figcaption-sc-1w1rqg8-1 docTtJ"
     >
-      Alpha SV Jacket
+      Axe Keeper Black
     </figcaption>
   </figure>
 </div>

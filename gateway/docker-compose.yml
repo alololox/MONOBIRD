@@ -3,9 +3,14 @@ version: "3.7"
 services:
   gateway:
     image: 'haproxy:2.1'
+    environment:
+      - DEBUG=1
+      - MARKET=outdoor
+      - CDP_PAGES_ORIGIN=host.docker.internal:3001
+      - PDP_ORIGIN=host.docker.internal:3002
     container_name: 'arc-gateway'
     ports: ['80:80']
     env_file:
-      - .env    
+      - ${ENV_FILE}
     volumes:
-      - ${MOUNT_DIR}/haproxy/:/usr/local/etc/haproxy:ro
+      - ./haproxy/:/usr/local/etc/haproxy:ro

@@ -41,14 +41,28 @@ const Li = styled.li`
     text-decoration: underline;
   }
 `;
+
+const Anchor = styled.a`
+  color: inherit;
+  text-decoration: none;
+`;
+
 const Header = ({ title, fancy }) => (
   <Bar fancy={fancy}>
     <Logo src="//images.arcteryx.com/foundation-ui/svgs/ArcBirdWhite.svg" />
     <Ul>
-      <Li>{title}</Li>
-      <Li>Men's</Li>
-      <Li>Women's</Li>
-      <Li>Explore</Li>
+      <Li>
+        <Anchor href="/">{title}</Anchor>
+      </Li>
+      <Li>
+        <Anchor href="/c/mens">Mens</Anchor>
+      </Li>
+      <Li>
+        <Anchor href="/c/womens">Womens</Anchor>
+      </Li>
+      <Li>
+        <Anchor href="/explore">Explore</Anchor>
+      </Li>
     </Ul>
   </Bar>
 );

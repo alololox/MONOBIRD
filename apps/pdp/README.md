@@ -6,36 +6,33 @@ MONO REPO
 
 This NextJS application will represent the PDP application of the MONO REPO.
 
+## Dependencies
+
+Depends on PDP and PIM microservices to be running. Make sure to start those 2 servers before running this.
+
 ## Steps
 
-1. npm install
-2. npm run build
-3. npm run start
-4. Go to http://localhost:3000
+1. Update/install Node modules
+   `npm install`
+
+2. Start App
+   `npm run dev`
+
+3. Go to http://localhost:{PORT}/market/country/language/shop/6202 where default {PORT}=3000
 
 ## Dockerize
 
 1. Create Docker image
-
-> docker build -t nextjsapp .
+   `docker build -t nextjsapp .`
 
 2. Create and run our container
+   `docker run --rm -d -p 9080:3000 --name pdp nextjsapp`
 
-> docker run --rm -d -p 9080:3000 --name pdp nextjsapp
+3. Go to http://localhost:9080/shop
 
-3. Go to http://localhost:9080
+### Docker Start/stop scripts
 
-### Start/stop scripts
+Start: `./docker-start.sh`
+Stop: `./docker-stop.sh`
 
-Start
-
-> ./docker-start.sh
-
-Stop
-
-> ./docker-stop.sh
-.
-.
-.
-.
 .
