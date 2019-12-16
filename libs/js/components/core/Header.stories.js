@@ -2,8 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Header } from "./index.js";
 
-storiesOf("Header", module).add("Header Time", () => (
-  <>
-    <Header />{" "}
-  </>
-));
+export default { component: Header, title: "Header" };
+
+export const outdoor = () => <Header title="outdoor" />;
+export const fancy = () => <Header title="Fancy" fancy={true} />;
