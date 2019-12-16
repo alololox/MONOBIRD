@@ -13,7 +13,7 @@ const Figcaption = styled.figcaption`
   display: none;
 `;
 
-const HeroImage = (props) => (
+const HeroImage = props => (
   <div className="product-image">
     <figure>
       <Image
@@ -21,8 +21,8 @@ const HeroImage = (props) => (
         itemType="image"
         alt="Axe Keeper Black"
         data-colour-name="Black"
-        data-large-image= {props.product.details.largeImageUrl}
-        data-small-image=  {props.product.details.largeImageUrl}
+        data-large-image={props.product.details.largeImageUrl}
+        data-small-image={props.product.details.largeImageUrl}
       />
       <Figcaption>{props.product.name}k</Figcaption>
     </figure>

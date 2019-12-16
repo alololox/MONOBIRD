@@ -9,15 +9,16 @@ exports[`HeroImage Discounted price contains discounted class 1`] = `
       alt="Axe Keeper Black"
       className="heroImage__Image-sc-1w1rqg8-0 hWmYwM"
       data-colour-name="Black"
-      data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Axe-Keeper-Black.jpg?auto=format&w=1350"
-      data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
+      data-large-image="https://images.arcteryx.com/F19/162x205/Atom-LT-Hoody-Black.gif"
+      data-small-image="https://images.arcteryx.com/F19/162x205/Atom-LT-Hoody-Black.gif"
       itemType="image"
-      src="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
+      src="https://images.arcteryx.com/F19/162x205/Atom-LT-Hoody-Black.gif"
     />
     <figcaption
       className="heroImage__Figcaption-sc-1w1rqg8-1 docTtJ"
     >
-      Axe Keeper Black
+      Atom LT Hoody Men's
+      k
     </figcaption>
   </figure>
 </div>
