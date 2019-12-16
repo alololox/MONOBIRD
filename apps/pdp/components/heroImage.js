@@ -13,18 +13,18 @@ const Figcaption = styled.figcaption`
   display: none;
 `;
 
-const HeroImage = () => (
+const HeroImage = (props) => (
   <div className="product-image">
     <figure>
       <Image
-        src="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
+        src={props.product.details.largeImageUrl}
         itemType="image"
         alt="Axe Keeper Black"
         data-colour-name="Black"
-        data-large-image="https://images-dynamic-arcteryx.imgix.net/F19/1350x1710/Axe-Keeper-Black.jpg?auto=format&amp;w=1350"
-        data-small-image="https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
+        data-large-image= {props.product.details.largeImageUrl}
+        data-small-image=  {props.product.details.largeImageUrl}
       />
-      <Figcaption>Axe Keeper Black</Figcaption>
+      <Figcaption>{props.product.name}k</Figcaption>
     </figure>
   </div>
 );

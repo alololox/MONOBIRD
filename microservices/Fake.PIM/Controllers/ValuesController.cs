@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Fake.PIM.data;
 using Fake.PIM.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -10,11 +11,11 @@ namespace cdp_api.Controllers
     [Route("[controller]")]
     public class ValuesController : ControllerBase
     {
-        private readonly IQueryable<recordsRecord> data; 
+        private readonly IQueryable<recordsRecord> data;
 
         public ValuesController(IPimData pimData)
         {
-            data =  pimData.Getdata(); 
+            data = pimData.Getdata();
         }
 
         // GET api/values
@@ -26,29 +27,16 @@ namespace cdp_api.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<recordsRecord> Get(string id) 
+        public ActionResult<recordsRecord> Get(string id)
         {
-            
-            var xxx = data.FirstOrDefault(x => x.fields[0].values[0].Value == id);
-          return xxx;
+            recordsRecord record = null;
+            record = data.First(x => x.fields.Any(n => n.name == "name" && n.values.Any(q => q.Value.ToLower() == id.ToLower())));
+            if (record != null)
+                return record;
+            //return via id (faster than text)
+            record = data.FirstOrDefault(x => x.fields[0].values[0].Value == id);
+            return record;
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
