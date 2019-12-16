@@ -19,7 +19,7 @@ namespace Api.Pdp.UnitTests
                 }
             };
 
-            var result = Converters.toCDP(recordsRecord);
+            var result = Converters.toPdpModel(recordsRecord);
             Assert.AreEqual(result.Name, productname);
         }
     }

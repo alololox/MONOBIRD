@@ -12,7 +12,7 @@ export async function fetchOrCatchFromAPI(url) {
 
 export async function getProductData(productName) {
   const requestUrl = `${process.env.PDP_API ||
-    "http://localhost:5002/api/values"}/${productName}`;
+    "http://localhost:5002/values"}/${productName}`;
   return fetchOrCatchFromAPI(requestUrl);
 }
 
