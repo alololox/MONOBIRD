@@ -10,7 +10,8 @@ exports[`Dirty Little ProductTile Test Renders ProductTile 1`] = `
       Alpha SV Jacket Men's
     </h3>
     <img
-      src="//placehold.it/250x250"
+      class="sc-bZQynM gflrCe"
+      src="https://images.arcteryx.com/F19/350w/Alpha-SV-Jacket-Labyrinth.jpg"
     />
   </a>
 </DocumentFragment>
