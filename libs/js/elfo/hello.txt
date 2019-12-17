@@ -69,9 +69,6 @@
 
       <h1 class="Title__H1-sc-2pjkz9-0 gqXlBo">Axe Keeper</h1>
 
-      <p class="style__Paragraph-sc-1rqlib6-1 htQgVh">Quick release Velcro&#174; strap
-      for attaching ice axes</p>
-
       <div class="product-image">
         <img src=
         "https://images-dynamic-arcteryx.imgix.net/F19/450x625/Axe-Keeper-Black.png?auto=format"
