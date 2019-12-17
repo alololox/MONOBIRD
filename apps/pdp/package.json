@@ -15,8 +15,8 @@
   },
   "husky": {
     "hooks": {
-     "pre-commit": "",
-     "pre-push": ""
+      "pre-commit": "",
+      "pre-push": ""
     }
   },
   "keywords": [],
@@ -45,7 +45,7 @@
     "enzyme-to-json": "^3.4.3",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
-    "monobird-test-components": "^0.2.0",
+    "monobird-test-components": "^0.3.0",
     "styled-components": "^4.4.1"
   },
   "jest": {

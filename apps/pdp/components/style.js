@@ -10,7 +10,7 @@ export const Paragraph = styled.p(props => ({
   fontSize: "15px",
   lineHeight: "15px",
   color: "#000",
-  maxWidth: "650px",
+  maxWidth: `${props.maxWidth || "650px"}`,
   margin: "0 0 1.5em 0",
   textAlign: props.align ? props.align : "left"
 }));

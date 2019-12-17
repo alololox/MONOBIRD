@@ -15,7 +15,7 @@ function Index(props) {
     <Section {...props}>
       <Header title="monobird" />
       <Title name={props.product.name} />
-      <Paragraph align="center">
+      <Paragraph align="center" maxWidth="350px">
         {props.product.details.translatedDescr}
       </Paragraph>
       <HeroImage {...props} />
