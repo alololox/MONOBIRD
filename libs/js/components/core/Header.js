@@ -6,7 +6,10 @@ const Bar = styled.div`
   box-sizing: border-box;
   height: 50px;
   width: 100%;
-  background-color: #000;
+  background: ${props =>
+    props.fancy
+      ? "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,79,9,1) 35%, rgba(0,212,255,1) 100%)"
+      : "#000"};
   display: flex;
   justify-content: flex-start;
   padding: 0 10px;
@@ -44,14 +47,22 @@ const Anchor = styled.a`
   text-decoration: none;
 `;
 
-const Header = ({ title }) => (
-  <Bar>
+const Header = ({ title, fancy }) => (
+  <Bar fancy={fancy}>
     <Logo src="//images.arcteryx.com/foundation-ui/svgs/ArcBirdWhite.svg" />
     <Ul>
-      <Li><Anchor href="/">{title}</Anchor></Li>
-      <Li><Anchor href="/c/mens">Mens</Anchor></Li>
-      <Li><Anchor href="/c/womens">Womens</Anchor></Li>
-      <Li><Anchor href='/explore'>Explore</Anchor></Li>
+      <Li>
+        <Anchor href="/">{title}</Anchor>
+      </Li>
+      <Li>
+        <Anchor href="/c/mens">Mens</Anchor>
+      </Li>
+      <Li>
+        <Anchor href="/c/womens">Womens</Anchor>
+      </Li>
+      <Li>
+        <Anchor href="/explore">Explore</Anchor>
+      </Li>
     </Ul>
   </Bar>
 );

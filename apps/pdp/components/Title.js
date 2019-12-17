@@ -5,7 +5,7 @@ const H1 = styled.h1`
   font-size: 24px;
   line-height: 1.25em;
   text-transform: uppercase;
-  margin: 0 0 15px 0;
+  margin: 30px 0 15px 0;
   text-align: center;
 `;
 

@@ -28,7 +28,7 @@
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
     "babel-plugin-styled-components": "^1.10.6",
-    "monobird-test-components": "^0.2.0",
+    "monobird-test-components": "^0.3.0",
     "styled-components": "^4.4.1"
   }
 }

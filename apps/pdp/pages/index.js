@@ -15,7 +15,7 @@ function Index(props) {
     <Section {...props}>
       <Header title="monobird" />
       <Title name={props.product.name} />
-      <Paragraph align="center">
+      <Paragraph align="center" maxWidth="350px">
         {props.product.details.translatedDescr}
       </Paragraph>
       <HeroImage {...props} />
@@ -26,9 +26,17 @@ function Index(props) {
 Index.getInitialProps = async ({ query, asPath, pathname, res }) => {
   const { slug } = query;
   const surrogateKey = pathname.replace("/", "");
-  let product = {};
+  let productName = slug.replace(/-/g, " ");
+  let gender = "";
+  if (slug.indexOf("womens") > -1) {
+    gender = " women's";
+    productName = productName.replace("womens/", "");
+  } else if (slug.indexOf("mens") > -1) {
+    gender = " men's";
+    productName = productName.replace("mens/", "");
+  }
 
-  product = await getProductData(slug);
+  const product = await getProductData(`${productName}${gender}`);
 
   if (product == null) {
     if (res) {
