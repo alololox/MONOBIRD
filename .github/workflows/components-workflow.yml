@@ -2,7 +2,7 @@ name: Components
 on:
   pull_request:
     paths:
-      - 'libs/js/components/*'
+      - 'libs/js/*'
   push:
     branches: 
       - develop
