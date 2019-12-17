@@ -13,6 +13,7 @@ export const ProductTileWrapper = styled.div`
   max-width: 1515px;
   margin: 0 auto;
   position: relative;
+  text-align: center;
 `;
 
 export const ProductTile = styled.div`
